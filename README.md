@@ -24,9 +24,9 @@ Las opciones que se pueden seleccionar son las siguientes:
 * Ignorar antialiasing
 * Ignorar alpha
 
-**Tamaño de la imagen:** Se puede cambiar al tamaño original o escalar al mismo tamaño.
-**Color diferencias:** Se puede seleccionar el color con el que muestra las diferencias encontradas, puede ser amarillo o fucsia.
-**Color similitudes.** Estan las opciones de Opaco y transparante, con ellos se evidencia las areas de la imagen que si concuerdan.
-**Establecer cuadro delimitador:** Delimita el área del cuadro que se quiere comparar.
-**Establecer cuadro ignorado:** Delimita el área del cuadro que no se quiere comparar.
-**Establecer color ignorado:** Indica un color en especifico que desea ser ignorado.
+**Tamaño de la imagen:** Se puede cambiar al tamaño original o escalar al mismo tamaño. <br/>
+**Color diferencias:** Se puede seleccionar el color con el que muestra las diferencias encontradas, puede ser amarillo o fucsia. <br/>
+**Color similitudes.** Estan las opciones de Opaco y transparante, con ellos se evidencia las areas de la imagen que si concuerdan. <br/>
+**Establecer cuadro delimitador:** Delimita el área del cuadro que se quiere comparar. <br/>
+**Establecer cuadro ignorado:** Delimita el área del cuadro que no se quiere comparar.<br/>
+**Establecer color ignorado:** Indica un color en especifico que desea ser ignorado.<br/>
