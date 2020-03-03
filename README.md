@@ -1,4 +1,4 @@
-#Presentado por:
+# Presentado por:
   * Ingrid Dayana Romero Melgarejo
   * Deisy Tatiana Macias Cardenas
   
@@ -6,9 +6,11 @@
 
 * **¿Qué información puedo obtener de una imagen al usar resembleJS y que significado tiene cada uno de los componentes de la respuesta?.**
 
+
+
 * **¿Qué información puedo obtener al comparar dos imagenes?**
 
-Muestra las diferencias encontradas entre las dos imagenes a comparar, este genera una nueva imagen con las areas que tienen diferencia  color amarillo o fucsia. ResembleJS cuenta con varios algoritmos de comparación, el cual se puede seleccionar dependiendo de la prueba que se desee reaizar. Cada tipo de algoritmo imprime un porcentaje de diferencias halladas entre las imagenes comparadas.
+Muestra las diferencias encontradas entre las dos imagenes a comparar, este genera una nueva imagen con las áreas que tienen diferencia  color amarillo o fucsia. ResembleJS cuenta con varios algoritmos de comparación, el cual se puede seleccionar dependiendo de la prueba que se desee reaizar. Cada tipo de algoritmo imprime un porcentaje de diferencias halladas entre las imagenes comparadas.
 
 * **¿Qué opciones se pueden seleccionar al realizar la comparación ?**
 
