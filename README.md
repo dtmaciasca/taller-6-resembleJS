@@ -4,7 +4,7 @@
   
 # ResembleJS
 
-* **¿Qué información puedo obtener de una imagen al usar resembleJS y que significado tiene cada uno de los componentes de la respuesta?.**
+**¿Qué información puedo obtener de una imagen al usar resembleJS y que significado tiene cada uno de los componentes de la respuesta?.**
 
 La información que se puede obtener de una imagen es la siguiente:
 
@@ -12,11 +12,11 @@ La información que se puede obtener de una imagen es la siguiente:
 * **Blanco y Negro:** Obtiene la cantidad de blancos y negros que tiene la imagen.
 * **Brillo:** Obtiene el brillo de la imagen.
 
-* **¿Qué información puedo obtener al comparar dos imagenes?**
+**¿Qué información puedo obtener al comparar dos imagenes?**
 
 Muestra las diferencias encontradas entre las dos imagenes a comparar, este genera una nueva imagen con las áreas que tienen diferencia  color amarillo o fucsia. ResembleJS cuenta con varios algoritmos de comparación, el cual se puede seleccionar dependiendo de la prueba que se desee reaizar. Cada tipo de algoritmo imprime un porcentaje de diferencias halladas entre las imagenes comparadas.
 
-* **¿Qué opciones se pueden seleccionar al realizar la comparación ?**
+**¿Qué opciones se pueden seleccionar al realizar la comparación ?**
 
 Las opciones que se pueden seleccionar son las siguientes:
 
