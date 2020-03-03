@@ -6,7 +6,11 @@
 
 * **¿Qué información puedo obtener de una imagen al usar resembleJS y que significado tiene cada uno de los componentes de la respuesta?.**
 
+La información que se puede obtener de una imagen es la siguiente:
 
+* RGBA: Obtiene los valores RGBA que tiene la imagen.
+* Blanco y Negro: Obtiene la cantidad de blancos y negros que tiene la imagen.
+* Brillo: Obtiene el brillo de la imagen.
 
 * **¿Qué información puedo obtener al comparar dos imagenes?**
 
