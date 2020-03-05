@@ -1,9 +1,21 @@
 # Presentado por:
   * Ingrid Dayana Romero Melgarejo
   * Deisy Tatiana Macias Cardenas
-  
-# ResembleJS
 
+# Punto 1
+
+https://github.com/dtmaciasca/taller-6-resembleJS/tree/master/VRT_colorPallete
+
+# Punto 2
+
+https://github.com/dtmaciasca/taller-6-resembleJS/tree/master/Punto2/cypress_test
+
+Uno de los problemas de los screenshots tomados por Cypress, es que cuando la pagina es muy larga, Cypress se toma demasiado tiempo tomandolos y el test puede fallar por Timeout. Además, en una sola imagen concatena varios pantallazos tomados de esa pagina larga. Cypress no identifica bien cuando los componentes estan en segundo plano, nos referimos a que por ejemplo en el Pop-Up de la bienvenida a los estudiantes nos concateno dos veces ese cuadro de dialogo porque estaba sacando todas las imagenes de ese pagina larga.
+
+# Punto 3:
+
+https://github.com/dtmaciasca/taller-6-resembleJS/tree/master/Punto3
+  
 **¿Qué información puedo obtener de una imagen al usar resembleJS y que significado tiene cada uno de los componentes de la respuesta?.**
 
 La información que se puede obtener de una imagen es la siguiente:
@@ -34,3 +46,7 @@ Las opciones que se pueden seleccionar son las siguientes:
 **Establecer cuadro delimitador:** Delimita el área del cuadro que se quiere comparar. <br/> <br/>
 **Establecer cuadro ignorado:** Delimita el área del cuadro que no se quiere comparar.<br/> <br/>
 **Establecer color ignorado:** Indica un color en especifico que desea ser ignorado.<br/> <br/>
+
+# Punto 4:
+
+https://github.com/dtmaciasca/taller-6-resembleJS/tree/master/Punto4
