@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "resemblejs": "^3.2.4"
+  },
+  "description": "Image analysis and comparison"
+}
