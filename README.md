@@ -50,3 +50,8 @@ Las opciones que se pueden seleccionar son las siguientes:
 # Punto 4:
 
 https://github.com/dtmaciasca/taller-6-resembleJS/tree/master/Punto4
+
+**Gif:** <img src="https://github.com/dtmaciasca/taller-6-resembleJS/blob/master/Punto4/reporte/Reporte%20gif.gif" /> </br></br>
+
+**Screenshots:** <img src="https://github.com/dtmaciasca/taller-6-resembleJS/blob/master/Punto4/reporte/pantallazo.png" />
+
