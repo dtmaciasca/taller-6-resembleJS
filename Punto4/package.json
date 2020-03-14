@@ -3,7 +3,9 @@
   "version": "0.0.0",
   "private": true,
   "dependencies": {
+    "dateformat": "^3.0.3",
     "express": "^4.17.1",
+    "reload": "^3.0.4",
     "resemblejs": "^3.2.4"
   }
 }

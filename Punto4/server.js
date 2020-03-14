@@ -2,6 +2,8 @@ const http = require('http');
 const fs = require('fs');
 var path = require('path');
 var js = require('./app.js');
+const dateFormat = require('dateformat');
+const reload = require('reload');
 
 const hostname = '127.0.0.1';
 const port = 3000;
@@ -22,49 +24,54 @@ const createHtml = (table) => `
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
 </head>
   <body>
+  <form action="/cypress" method="post">
 
     <div style="float:left; width: 80%">
       <h2 class="text-center">Información de Visual Regression Testing</h2>
     </div>
       <div class="text-left mt-4">
-        <input name="like" id="demo" value="Generar reporte" type="submit" class="btn btn-primary btn-test" />
+        <input class="btn btn-success" type="submit" value="Generar reporte" />
       </div>
 
     <div class="card m-4">
       <table class="table table-striped" id="pantallazos">
         <thead class="text-center thead-dark">
           <tr>
-            <th></th>
+            <th>Fecha reporte</th>
             <th>Imagen Base</th>
             <th>Imagen modificada</th>
             <th>Diferencias</th>
-            <th></th>
+            <th>Resumen comparación</th>
           </tr>
         </thead>
         <tbody>${table}
         </tbody>
       </table>
     </div>
+    </form>
   </body>
 </html>
 `;
 
 app.get('/', (req, res) => {
   let imagenes = js.listarImagenes1();
-  console.log(imagenes);
   let tabla = "";
   for(let posicion in imagenes){
       let imagen = imagenes[posicion];
       tabla += `<tr>
-                <td>`+fs.statSync('./imagenes/imagen1/'+imagen).birthtime+`</td>
-                <td><img src="file://`+__dirname+`/imagenes/imagen1/`+imagen+`"/></td>
-                <td><img src="./imagenes/imagen2/`+imagen+`"/></td>
-                <td><img src="./imagenes/resultado/`+imagen+`"/></td>
-                <td></td>
+                <td style="width: 10%">`+dateFormat(fs.statSync('./imagenes/imagen1/'+imagen).birthtime, "dd/mm/yyyy" )+`</td>
+                <td><img width="350px" src="data:image/jpeg;base64, `+fs.readFileSync(`./imagenes/imagen1/`+imagen).toString('base64')+`"/></td>
+                <td><img width="350px" src="data:image/jpeg;base64, `+fs.readFileSync(`./imagenes/imagen2/`+imagen).toString('base64')+`"/></td>
+                <td><img width="350px" src="data:image/jpeg;base64, `+fs.readFileSync(`./imagenes/resultado/`+imagen).toString('base64')+`"/></td>
+                <td style="width: 20%">`+fs.readFileSync(`./imagenes/resultado/`+imagen.replace('png','txt')).toString('utf8')+`')</td>
                 </tr>`;
   }
 
   res.send(createHtml(tabla));
 });
 
-js.ejecutarCypress();
+app.post('/cypress', function (req, res) {
+    js.ejecutarCypress();
+});
+
+reload(app);

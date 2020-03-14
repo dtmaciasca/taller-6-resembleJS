@@ -34,7 +34,14 @@ ejecutarCypress:function(){
   comparar:function(cantidad) {
 		resemble(rutaImagen1+cantidad+'.png').compareTo(rutaImagen2+cantidad+'.png').ignoreLess().onComplete(function(data){
 			fs.writeFileSync(rutaResultado+cantidad+'.png', data.getBuffer());
-			console.log(data);
+      var respuesta = `{
+        "isSameDimensions": "`+data.isSameDimensions+`",
+        "dimensionDifference": { "width": `+data.dimensionDifference.width+`, "height": `+data.dimensionDifference.height+` },
+        "rawMisMatchPercentage": `+data.rawMisMatchPercentage+`,
+        "misMatchPercentage": "`+data.misMatchPercentage+`",
+        "diffBounds": { "top": `+data.diffBounds.top+`, "left": `+data.diffBounds.left+`, "bottom": `+data.diffBounds.bottom+`, "right": `+data.diffBounds.right+`},
+        "analysisTime": `+data.analysisTime+` }`
+      fs.writeFileSync(rutaResultado+cantidad+'.txt', respuesta);
 		});
 	},
 
@@ -42,15 +49,6 @@ ejecutarCypress:function(){
 	{
 		let files = fs.readdirSync(rutaImagen1);
 		return files;
-	},
-
-  listarImagenes:function()
-	{
-    console.log('populate..............');
-    var tableRef = document.getElementById('pantallazos').getElementsByTagName('tbody')[0];
-
-    var newRow = tableRef.insertRow(tableRef.rows.length);
-    newRow.innerHTML = "<td><img src=./imagenes.png></td>";
 	}
 
 }
